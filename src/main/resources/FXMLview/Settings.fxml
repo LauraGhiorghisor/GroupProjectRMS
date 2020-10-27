@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox>
+         <children>
+            <VBox maxHeight="-Infinity" prefHeight="550.0" prefWidth="400.0">
+               <children>
+                  <HBox prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <Label minHeight="-Infinity" prefHeight="30.0" prefWidth="237.0" text="Display Settings" textFill="#2c787c">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <Label minHeight="-Infinity" prefHeight="30.0" prefWidth="190.0" text="Font Size" />
+                        <MenuButton mnemonicParsing="false" prefHeight="30.0" style="-fx-background-color: transparent;" text="Medium">
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Small" />
+                            <MenuItem mnemonicParsing="false" text="Large" />
+                          </items>
+                        </MenuButton>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <Label minHeight="-Infinity" prefHeight="30.0" prefWidth="200.0" text="Dark Mode" />
+                        <ToggleButton mnemonicParsing="false" prefHeight="30.0" style="-fx-background-color: #2c787c #2c787c; -fx-border-radius: 5px; -fx-background-radius: 5px;" text="Off" textFill="#fcfcfc" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="200.0" text="Mute Notifications" />
+                        <ToggleButton mnemonicParsing="false" prefHeight="30.0" style="-fx-background-color: #2c787c #2c787c; -fx-border-radius: 5px; -fx-background-radius: 5px;" text="Off" textFill="#fcfcfc" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <Label minHeight="-Infinity" prefHeight="30.0" prefWidth="281.0" text="Accessibility Settings" textFill="#2c787c">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="50.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="200.0" text="Turn on ScreenReader Mode" />
+                        <ToggleButton mnemonicParsing="false" prefHeight="30.0" style="-fx-background-color: #2c787c #2c787c; -fx-border-radius: 5px; -fx-background-radius: 5px;" text="On" textFill="#fcfcfc" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="200.0" text="Tooltips" />
+                        <ToggleButton mnemonicParsing="false" prefHeight="30.0" style="-fx-background-color: #2c787c #2c787c; -fx-border-radius: 5px; -fx-background-radius: 5px;" text="Off" textFill="#fcfcfc" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="200.0" text="Show Image Description" />
+                        <ToggleButton mnemonicParsing="false" prefHeight="30.0" style="-fx-background-color: #2c787c #2c787c; -fx-border-radius: 5px; -fx-background-radius: 5px;" text="Off" textFill="#fcfcfc" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </VBox>
+            <VBox prefHeight="550.0" prefWidth="400.0">
+               <children>
+                  <HBox prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <Label minHeight="-Infinity" prefHeight="30.0" prefWidth="273.0" text="Networking Settings" textFill="#2c787c">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <Label minHeight="-Infinity" prefHeight="30.0" prefWidth="200.0" text="Allow Incoming Messages" />
+                        <ToggleButton mnemonicParsing="false" prefHeight="30.0" style="-fx-background-color: #2c787c #2c787c; -fx-border-radius: 5px; -fx-background-radius: 5px;" text="On" textFill="#fcfcfc" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="200.0" text="Sync Timetable and Diary" />
+                        <ToggleButton mnemonicParsing="false" prefHeight="30.0" style="-fx-background-color: #2c787c #2c787c; -fx-border-radius: 5px; -fx-background-radius: 5px;" text="Off" textFill="#fcfcfc" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="200.0" text="Allow Messaging Notifications" />
+                        <ToggleButton mnemonicParsing="false" prefHeight="30.0" style="-fx-background-color: #2c787c #2c787c; -fx-border-radius: 5px; -fx-background-radius: 5px;" text="Off" textFill="#fcfcfc" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomePageController">
+   <children>
+      <HBox alignment="CENTER_LEFT" layoutX="-3.0" layoutY="-4.0" prefHeight="50.0" prefWidth="1440.0" style="-fx-background-color: #4b7063;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="809.0">
+               <children>
+                  <Button fx:id="backBtn" mnemonicParsing="false" style="-fx-background-color: transparent;" />
+                  <Button fx:id="fwdBtn" mnemonicParsing="false" style="-fx-background-color: transparent;" />
+                  <Separator prefWidth="35.0" rotate="90.0" />
+                  <Button fx:id="homeBtn" mnemonicParsing="false" style="-fx-background-color: transparent;" />
+                  <Button fx:id="refreshBtn" mnemonicParsing="false" style="-fx-background-color: transparent;" />
+                  <Separator prefWidth="35.0" rotate="90.0" />
+                  <Button fx:id="zoomInBtn" mnemonicParsing="false" style="-fx-background-color: transparent;" />
+                  <Button fx:id="zoomOutBtn" mnemonicParsing="false" style="-fx-background-color: transparent;" />
+                  <Separator prefWidth="35.0" rotate="90.0" />
+                  <Button fx:id="undoBtn" mnemonicParsing="false" style="-fx-background-color: transparent;" />
+                  <Button fx:id="redoBtn" mnemonicParsing="false" style="-fx-background-color: transparent;" />
+                  <Separator prefWidth="35.0" rotate="90.0" />
+                  <Button fx:id="faqBtn" mnemonicParsing="false" style="-fx-background-color: transparent;" />
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="FAQ">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Text>
+                  <Separator prefWidth="35.0" rotate="90.0" />
+                  <Button fx:id="legalBtn" mnemonicParsing="false" style="-fx-background-color: transparent;" text="LEGAL" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Separator prefWidth="35.0" rotate="90.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="50.0" prefWidth="0.0" />
+            <HBox alignment="CENTER_RIGHT" nodeOrientation="RIGHT_TO_LEFT" prefHeight="50.0" prefWidth="654.0" style="-fx-background-color: #4b7063;">
+               <children>
+                  <Button fx:id="logoutBtn" mnemonicParsing="false" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" text="Settings" />
+                  <Button fx:id="profileBtn" layoutX="413.0" layoutY="47.0" mnemonicParsing="false" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS" />
+                  <Text fx:id="loginLabel" fill="WHITE" layoutX="10.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Logged in as Dan" wrappingWidth="162.91241455078125" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Text fx:id="lastLogLabel" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Logged in Monday 4th November 2019">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutY="91.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <ImageView fitHeight="105.0" fitWidth="153.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../images/Woodlands.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="25.0" right="10.0" top="8.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+      </HBox>
+      <VBox alignment="CENTER_LEFT" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="1585.0" style="-fx-background-color: #aaaaaa;">
+               <children>
+                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createTab" prefHeight="40.0" prefWidth="150.0" style="-fx-background-radius: 5px 5px 5px 5px; -fx-background-color: white; -fx-border-color: #287280#287280; -fx-border-width: 1px; -fx-border-radius: 5px; -fx-padding: 10px;" text="STUDENTS" />
+                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" style="-fx-background-radius: 5px 5px 5px 5px; -fx-background-color: white; -fx-border-color: #287280#287280; -fx-border-width: 1px; -fx-border-radius: 5px; -fx-padding: 10px;" text="STAFF" />
+                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" style="-fx-background-radius: 5px 5px 5px 5px; -fx-background-color: white; -fx-border-color: #287280#287280; -fx-border-width: 1px; -fx-border-radius: 5px; -fx-padding: 10px;" text="MODULES" />
+                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" style="-fx-background-radius: 5px 5px 5px 5px; -fx-background-color: white; -fx-border-color: #287280#287280; -fx-border-width: 1px; -fx-border-radius: 5px; -fx-padding: 10px;" text="COURSES" />
+                  <Separator prefHeight="0.0" prefWidth="60.0" rotate="90.0" />
+                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" style="-fx-background-radius: 5px 5px 5px 5px; -fx-background-color: white; -fx-border-color: #287280#287280; -fx-border-width: 1px; -fx-border-radius: 5px; -fx-padding: 10px;" text="PERSONAL TUTORS" />
+                  <Separator prefWidth="60.0" rotate="90.0" />
+                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" style="-fx-background-radius: 5px 5px 5px 5px; -fx-background-color: white; -fx-border-color: #287280#287280; -fx-border-width: 1px; -fx-border-radius: 5px; -fx-padding: 10px;" text="TIMETABLE" />
+                  <Separator minWidth="-Infinity" prefWidth="59.0" rotate="90.0" />
+                  <HBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT">
+                     <children>
+                        <Button fx:id="notifBtn" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" style="-fx-background-radius: 5px 5px 5px 5px; -fx-background-color: white; -fx-border-color: #287280#287280; -fx-border-width: 1px; -fx-border-radius: 5px; -fx-padding: 10px;">
+                           <HBox.margin>
+                              <Insets right="40.0" />
+                           </HBox.margin></Button>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="1263.0" style="-fx-background-color: #aaaaaa;">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="110.0" style="-fx-background-radius: 5px 5px 5px 5px; -fx-background-color: white; -fx-border-color: #287280#287280; -fx-border-width: 1px; -fx-border-radius: 5px; -fx-padding: 10px;" text="ASSESMENTS" />
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="110.0" style="-fx-background-radius: 5px 5px 5px 5px; -fx-background-color: white; -fx-border-color: #287280#287280; -fx-border-width: 1px; -fx-border-radius: 5px; -fx-padding: 10px;" text="ATTENDANCE" />
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="110.0" style="-fx-background-radius: 5px 5px 5px 5px; -fx-background-color: white; -fx-border-color: #287280#287280; -fx-border-width: 1px; -fx-border-radius: 5px; -fx-padding: 10px;" text="GRADES" />
+                        <Separator minWidth="-Infinity" prefWidth="59.0" rotate="90.0">
+                           <HBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </HBox.margin>
+                        </Separator>
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" style="-fx-background-radius: 5px 5px 5px 5px; -fx-background-color: white; -fx-border-color: #287280#287280; -fx-border-width: 1px; -fx-border-radius: 5px; -fx-padding: 10px;" text="FORMS" />
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" style="-fx-background-radius: 5px 5px 5px 5px; -fx-background-color: white; -fx-border-color: #287280#287280; -fx-border-width: 1px; -fx-border-radius: 5px; -fx-padding: 10px;" text="ROOMS" />
+                        <Separator layoutX="340.0" layoutY="39.0" minWidth="-Infinity" prefWidth="59.0" rotate="90.0">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </Separator>
+                     </children></HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="133.0">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="Book Room" />
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="Message" />
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="Diary">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Separator minWidth="-Infinity" prefWidth="59.0" rotate="90.0">
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </HBox.margin>
+                  </Separator>
+                  <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+                  <HBox alignment="CENTER_RIGHT" minHeight="-Infinity" prefHeight="60.0">
+                     <children>
+                        <TextField minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="154.0" style="-fx-background-radius: 5px 0px 0px 5px;">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="37.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 0px 5px 5px 0px; -fx-padding: 0px;" text="Search">
+                           <HBox.margin>
+                              <Insets right="50.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox layoutX="4.0" layoutY="279.0" prefHeight="768.0" prefWidth="1764.0" AnchorPane.bottomAnchor="34.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="171.0">
+         <children>
+            <TabPane fx:id="homePageTab" prefHeight="714.0" prefWidth="1762.0" tabClosingPolicy="UNAVAILABLE" HBox.hgrow="ALWAYS">
+              <tabs>
+                <Tab text="Untitled Tab 1">
+                  <content>
+                    <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="637.0" prefWidth="1776.0">
+                           <children>
+                              <HBox layoutX="-2.0" layoutY="-2.0" prefHeight="108.0" prefWidth="1776.0" AnchorPane.bottomAnchor="531.0" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="-2.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="CREATE">
+                                       <effect>
+                                          <Glow />
+                                       </effect></Button>
+                                    <Button layoutX="30.0" layoutY="51.0" mnemonicParsing="false" text="SAVE">
+                                       <HBox.margin>
+                                          <Insets left="50.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button layoutX="142.0" layoutY="51.0" mnemonicParsing="false" text="PRINT">
+                                       <HBox.margin>
+                                          <Insets left="50.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <padding>
+                                    <Insets left="20.0" top="20.0" />
+                                 </padding>
+                              </HBox>
+                              <AnchorPane layoutX="-1.0" layoutY="49.0" prefHeight="105.0" prefWidth="768.0" AnchorPane.bottomAnchor="483.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1009.0" AnchorPane.topAnchor="49.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" layoutX="16.0" layoutY="-6.0" prefHeight="111.0" prefWidth="751.0" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="-2.0">
+                                       <children>
+                                          <ChoiceBox prefWidth="150.0">
+                                             <HBox.margin>
+                                                <Insets left="20.0" right="20.0" />
+                                             </HBox.margin>
+                                          </ChoiceBox>
+                                          <ChoiceBox layoutX="10.0" layoutY="53.0" prefWidth="150.0" />
+                                          <ChoiceBox layoutX="180.0" layoutY="53.0" prefWidth="150.0">
+                                             <HBox.margin>
+                                                <Insets left="20.0" />
+                                             </HBox.margin>
+                                          </ChoiceBox>
+                                          <ChoiceBox layoutX="350.0" layoutY="53.0" prefWidth="150.0">
+                                             <HBox.margin>
+                                                <Insets left="20.0" />
+                                             </HBox.margin>
+                                          </ChoiceBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </AnchorPane>
+                              <TableView layoutX="1.0" layoutY="139.0" prefHeight="578.0" prefWidth="1764.0" AnchorPane.bottomAnchor="18.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="139.0">
+                                <columns>
+                                  <TableColumn prefWidth="75.0" text="C1" />
+                                  <TableColumn prefWidth="75.0" text="C2" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Untitled Tab 2">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutY="1041.0" prefHeight="50.0" prefWidth="1784.0" style="-fx-background-color: #555555;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <Button fx:id="copyrightBtn" mnemonicParsing="false" style="-fx-background-color: transparent;" />
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="APEX 2020" />
+                  <Button fx:id="woodlandsBtn" mnemonicParsing="false" style="-fx-background-color: transparent;" />
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="WOODLANDSUC.UK" />
+                  <Button fx:id="twitterBtn" mnemonicParsing="false" style="-fx-background-color: transparent;" />
+                  <Button fx:id="linkedInBtn" mnemonicParsing="false" style="-fx-background-color: transparent;" />
+                  <Button fx:id="googleBtn" mnemonicParsing="false" style="-fx-background-color: transparent;" />
+                  <Button fx:id="facebookBtn" mnemonicParsing="false" style="-fx-background-color: transparent;" />
+                  <Button fx:id="wildeBtn" mnemonicParsing="false" style="-fx-background-color: transparent;" />
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="WILDE" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+            <Text fx:id="dateLabel" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Tuesday 5th November 2019" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets left="50.0" right="50.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="homePaneRS" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1200.0" stylesheets="@Stylesheets/main.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomePageController">
+   <children>
+      <HBox alignment="CENTER_LEFT" layoutX="7.0" layoutY="6.0" minHeight="-Infinity" prefHeight="40.0" prefWidth="1440.0" style="-fx-background-color: #378d94#378d94;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="40.0" prefWidth="809.0" style="-fx-background-color: #2c787c;">
+               <children>
+                  <Button fx:id="homeBtn1" mnemonicParsing="false" onAction="#createHomeTabRS" prefWidth="100.0" style="-fx-background-color: transparent;" text="Home" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/homeBtn.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator prefWidth="25.0" rotate="90.0" />
+                  <Button fx:id="refreshBtn1" mnemonicParsing="false" onAction="#refresh" prefWidth="100.0" style="-fx-background-color: transparent;" text="Refresh" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/refreshBtn.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+                  <Separator prefWidth="25.0" rotate="90.0" />
+                  <Button fx:id="faqBtn1" mnemonicParsing="false" onAction="#saveFaqRecordsStaff" prefWidth="100.0" style="-fx-background-color: transparent;" text="FAQ" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/faqBtn.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+                  <Separator prefWidth="25.0" rotate="90.0" />
+                  <Button fx:id="legalBtn1" mnemonicParsing="false" onAction="#saveTosRecordsStaff" prefWidth="100.0" style="-fx-background-color: transparent;" text="LEGAL" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/legalBtn.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label fx:id="ghostSessionL" text="Label" visible="false" />
+               </children>
+            </HBox>
+            <HBox minHeight="-Infinity" prefHeight="35.0" style="-fx-background-color: #2c787c;" HBox.hgrow="ALWAYS" />
+            <HBox alignment="CENTER_RIGHT" minHeight="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="35.0" style="-fx-background-color: #2c787c;">
+               <children>
+                  <Text fx:id="lastLogLabel" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Logged in Monday 4th November 2019">
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="loginLabel" fill="WHITE" layoutX="10.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dan" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="profileBtn1" layoutX="413.0" layoutY="47.0" mnemonicParsing="false" onAction="#showProfile" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/profileBtn.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="settingsBtn" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#showSettings" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/settingsBtn.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="logoutBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#endSession" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: transparent;" text="Button">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/logout.png" />
+                           </image></ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="2.0" right="30.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <VBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="90.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="45.0" style="-fx-background-color: #f2f2f0#f2f2f0 #f2f2f0#f2f2f0;">
+               <children>
+                  <Button alignment="CENTER_RIGHT" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createStudentTab" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: TRANSPARENT; -fx-background-radius: 5PX;" text="STUDENTS">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                     <padding>
+                        <Insets right="40.0" />
+                     </padding>
+                  </Button>
+                  <Separator minWidth="-Infinity" prefWidth="40.0" rotate="90.0" />
+                  <Button alignment="CENTER_RIGHT" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createStaffTab" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: TRANSPARENT; -fx-background-radius: 5PX;" text="STAFF">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                     <padding>
+                        <Insets right="40.0" />
+                     </padding>
+                  </Button>
+                  <Separator minWidth="-Infinity" prefWidth="40.0" rotate="90.0" />
+                  <Button alignment="CENTER_RIGHT" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createModuleTab" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: TRANSPARENT; -fx-background-radius: 5PX;" text="MODULES">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                     <padding>
+                        <Insets right="40.0" />
+                     </padding>
+                  </Button>
+                  <Separator minWidth="-Infinity" prefWidth="40.0" rotate="90.0" />
+                  <Button alignment="CENTER_RIGHT" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createCourseTab" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: TRANSPARENT; -fx-background-radius: 5PX;" text="COURSES">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                     <padding>
+                        <Insets right="40.0" />
+                     </padding>
+                  </Button>
+                  <Separator minWidth="-Infinity" prefWidth="40.0" rotate="90.0" />
+                  <MenuButton alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="155.0" style="-fx-background-color: transparent;" text="OTHER RECORDS">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#createAssessmentTabRS" text="ASSESSMENTS" />
+                        <MenuItem mnemonicParsing="false" onAction="#createGradesTabRS" text="GRADES" />
+                        <MenuItem mnemonicParsing="false" onAction="#createAttendanceTabRS" text="ATTENDANCE" />
+                        <MenuItem mnemonicParsing="false" onAction="#createTutorshipTabRS" text="PERSONAL TUTORSHIP" />
+                     </items>
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </MenuButton>
+                  <Separator minWidth="-Infinity" prefWidth="40.0" rotate="90.0" />
+                  <MenuButton alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="163.0" style="-fx-background-color: transparent;" text="ARCHIVED RECORDS">
+                     <items>
+                        <MenuItem fx:id="archiveStudent" mnemonicParsing="false" onAction="#archiveCreateStudentTab" text="STUDENTS" />
+                        <MenuItem fx:id="archiveStaff" mnemonicParsing="false" onAction="#archiveCreateStaffTab" text="STAFF" />
+                        <MenuItem fx:id="archiveModule" mnemonicParsing="false" onAction="#createArchiveModuleTab" text="MODULES" />
+                        <MenuItem fx:id="archiveCourse" mnemonicParsing="false" onAction="#createArchiveCourseTab" text="COURSES" />
+                        <MenuItem fx:id="archiveAssessment" mnemonicParsing="false" onAction="#createArchiveAssessmentTab" text="ASSESSMENTS" />
+                        <MenuItem fx:id="archiveGrades" mnemonicParsing="false" onAction="#createArchiveGradesTab" text="GRADES" />
+                        <MenuItem fx:id="archiveAttendance" mnemonicParsing="false" onAction="#createArchiveAttendanceTab" text="ATTENDANCE" />
+                     </items>
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </MenuButton>
+                  <Separator minWidth="-Infinity" prefWidth="40.0" rotate="90.0">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Separator>
+                  <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+                  <HBox alignment="CENTER_RIGHT" minHeight="-Infinity" prefHeight="45.0">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <children>
+                        <Button fx:id="notifBtn" alignment="CENTER_RIGHT" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" style="-fx-background-color: transparent;" text="NOTIFICATIONS">
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="25.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/notificationsBtn.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+               <effect>
+                  <DropShadow color="#cdcccc" height="0.0" radius="4.75" />
+               </effect>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" style="-fx-background-color: #f7f7f7#f7f7f7 #f7f7f7#f7f7f7; -fx-border-color: #e6e8e8#e6e8e8 #e6e8e8#e6e8e8; -fx-border-style: solid; -fx-border-width: 1px 0px 0px 0px;">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="searchTF" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="240.0" promptText="Search me" style="-fx-background-radius: 5px 0px 0px 5px; -fx-background-color: white; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: #9ccce4#9ccce4; -fx-border-radius: 5px 0px 0px 5px; -fx-background-insets: 2px;">
+                           <HBox.margin>
+                              <Insets right="-10.0" top="1.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </TextField>
+                        <ComboBox fx:id="searchCB" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="27.0" prefWidth="170.0" promptText="Category" style="-fx-background-color: white; -fx-border-color: #9ccce4#9ccce4 #9ccce4#9ccce4;">
+                           <padding>
+                              <Insets left="35.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets left="9.0" top="1.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#performSearchByTabAndID" prefHeight="27.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 0px 5px 5px 0px; -fx-padding: 5px; -fx-border-color: #9ccce4#9ccce4; -fx-border-width: 1px 1px 1px 0px; -fx-border-radius: 0px 5px 5px 0px; -fx-background-insets: 1px;" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets top="1.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/searchBtn.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
+                  <Separator minWidth="-Infinity" prefWidth="40.0" rotate="90.0">
+                     <HBox.margin>
+                        <Insets left="11.0" right="15.0" />
+                     </HBox.margin>
+                  </Separator>
+                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#showTimetable" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/timetableBtn.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button alignment="CENTER_RIGHT" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#showTimetable" prefHeight="40.0" prefWidth="90.0" style="-fx-background-color: TRANSPARENT; -fx-background-radius: 5PX;" text="TIMETABLE">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Button>
+                  <Separator minWidth="-Infinity" prefWidth="40.0" rotate="90.0">
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin></Separator>
+                  <HBox prefHeight="30.0" HBox.hgrow="ALWAYS" />
+                  <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="45.0">
+                     <children>
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createFormsTab" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: transparent;">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/forms2Btn.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Text fill="#464444" onMouseClicked="#createFormsTab" strokeType="OUTSIDE" strokeWidth="0.0" text="FORMS">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Text>
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#showBooking" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: transparent;">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/bookroomBtn.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Text fill="#464444" onMouseClicked="#showBooking" strokeType="OUTSIDE" strokeWidth="0.0" text="BOOK ROOM">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Text>
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: transparent;">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="28.0" onMouseClicked="#createIMChat" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/messagesBtn.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Text fill="#464444" onMouseClicked="#createIMChat" strokeType="OUTSIDE" strokeWidth="0.0" text="MESSAGE">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Text>
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: transparent;">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="28.0" onMouseClicked="#showDiary" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/diaryBtn.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Text fill="#464444" onMouseClicked="#showDiary" strokeType="OUTSIDE" strokeWidth="0.0" text="DIARY">
+                           <HBox.margin>
+                              <Insets left="3.0" right="30.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <effect>
+                  <DropShadow color="#cdcccc" height="5.0" offsetY="1.0" radius="6.0" />
+               </effect>
+            </HBox>
+         </children>
+      </VBox>
+      <StackPane style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-350.0" AnchorPane.topAnchor="130.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" StackPane.alignment="CENTER_LEFT">
+               <children>
+                  <TabPane fx:id="homePageTabPane" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets right="350.0" />
+                     </HBox.margin>
+                  </TabPane>
+               </children>
+               <StackPane.margin>
+                  <Insets />
+               </StackPane.margin>
+            </HBox>
+            <AnchorPane fx:id="notifPane" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="350.0" StackPane.alignment="CENTER_RIGHT">
+               <children>
+                  <ScrollPane layoutX="-2.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <content>
+                        <SplitPane dividerPositions="0.5, 0.5, 0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="350.0">
+                           <items>
+                              <AnchorPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="350.0">
+                                 <children>
+                                    <VBox alignment="CENTER_LEFT" layoutY="-13.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="40.0">
+                                             <children>
+                                                <Text fill="#2c787c" strokeType="OUTSIDE" strokeWidth="0.0" text="Announcements" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. " wrappingWidth="300.0" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. " wrappingWidth="300.0" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. " wrappingWidth="300.0" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER_RIGHT" minHeight="-Infinity" prefHeight="30.0">
+                                             <children>
+                                                <Text fill="#2c787c" onMouseClicked="#createNotificationsTab" strokeType="OUTSIDE" strokeWidth="0.0" text="View all..." />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets left="15.0" right="15.0" />
+                                       </padding>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="350.0">
+                                 <children>
+                                    <VBox alignment="CENTER_LEFT" layoutY="-13.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="40.0">
+                                             <children>
+                                                <Text fill="#2c787c" strokeType="OUTSIDE" strokeWidth="0.0" text="Notifications" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. " wrappingWidth="300.0" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. " wrappingWidth="300.0" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. " wrappingWidth="300.0" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER_RIGHT" minHeight="-Infinity" prefHeight="30.0">
+                                             <children>
+                                                <Text fill="#2c787c" onMouseClicked="#createNotificationsTab" strokeType="OUTSIDE" strokeWidth="0.0" text="View all..." />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets left="15.0" right="15.0" />
+                                       </padding>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="350.0">
+                                 <children>
+                                    <VBox alignment="CENTER_LEFT" layoutY="-13.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="40.0">
+                                             <children>
+                                                <Text fill="#2c787c" strokeType="OUTSIDE" strokeWidth="0.0" text="News" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. " wrappingWidth="300.0" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. " wrappingWidth="300.0" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. " wrappingWidth="300.0" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER_RIGHT" minHeight="-Infinity" prefHeight="30.0">
+                                             <children>
+                                                <Text fill="#2c787c" onMouseClicked="#createNotificationsTab" strokeType="OUTSIDE" strokeWidth="0.0" text="View all..." />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets left="15.0" right="15.0" />
+                                       </padding>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="350.0">
+                                 <children>
+                                    <VBox alignment="CENTER_LEFT" layoutY="-13.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="40.0">
+                                             <children>
+                                                <Text fill="#2c787c" strokeType="OUTSIDE" strokeWidth="0.0" text="Events" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. " wrappingWidth="300.0" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. " wrappingWidth="300.0" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. " wrappingWidth="300.0" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER_RIGHT" minHeight="-Infinity" prefHeight="30.0">
+                                             <children>
+                                                <Text fill="#2c787c" strokeType="OUTSIDE" strokeWidth="0.0" text="View all..." />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets left="15.0" right="15.0" />
+                                       </padding>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </items>
+                        </SplitPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+      <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="1061.0" minHeight="-Infinity" prefHeight="35.0" style="-fx-background-color: #555555;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="35.0">
+               <children>
+                  <Button fx:id="copyrightBtn" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/copyrightBtn.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="APEX 2020">
+                     <HBox.margin>
+                        <Insets right="70.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="woodlandsBtn" mnemonicParsing="false" onAction="#openWebsite" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/woodlandsBtn.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Hyperlink onAction="#openWebsite" text="WOODLANDSUC.UK" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets right="150.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Hyperlink>
+                  <Button fx:id="twitterBtn" mnemonicParsing="false" onAction="#openTwitter" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/twitterBtn.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="linkedInBtn" mnemonicParsing="false" onAction="#openLinkedin" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/linkedInBtn.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="googleBtn" mnemonicParsing="false" onAction="#openGoogle" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/googleBtn.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="facebookBtn" mnemonicParsing="false" onAction="#openFacebook" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/facebookBtn.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+            <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="35.0">
+               <HBox.margin>
+                  <Insets left="150.0" />
+               </HBox.margin>
+               <children>
+                  <Button fx:id="wildeBtn" mnemonicParsing="false" onAction="#openWilde" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/wildeBtn.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Hyperlink onAction="#openWilde" text="WILDE" textFill="WHITE">
+                     <font>
+                        <Font size="11.0" />
+                     </font></Hyperlink>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" minWidth="-Infinity" prefHeight="35.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+            <HBox alignment="CENTER_RIGHT" maxWidth="-Infinity" prefHeight="35.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets left="50.0" right="50.0" />
+               </HBox.margin>
+               <children>
+                  <Text fx:id="dateLabel" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Tuesday 5th November 2019">
+                     <font>
+                        <Font size="11.0" />
+                     </font></Text>
+               </children>
+            </HBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+   </children>
+</AnchorPane>

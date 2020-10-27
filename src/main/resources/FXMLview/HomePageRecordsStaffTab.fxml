@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="580.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeTabController">
+   <children>
+      <HBox alignment="CENTER" minWidth="-Infinity" prefHeight="600.0" prefWidth="1440.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane HBox.hgrow="ALWAYS">
+               <children>
+                  <StackPane alignment="TOP_CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane StackPane.alignment="TOP_CENTER">
+                           <children>
+                              <ScrollPane fitToHeight="true" fitToWidth="true" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="45.0">
+                                 <content>
+                                    <HBox>
+                                       <children>
+                                          <HBox minWidth="-Infinity" prefWidth="550.0" HBox.hgrow="ALWAYS" />
+                                          <HBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <AnchorPane HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <VBox alignment="TOP_CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="60.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: white; -fx-border-style: solid; -fx-border-width: 2px;" VBox.vgrow="ALWAYS">
+                                                               <children>
+                                                                  <Text fill="#2c787c" strokeType="OUTSIDE" strokeWidth="0.0" text="NOTIFICATIONS">
+                                                                     <font>
+                                                                        <Font size="24.0" />
+                                                                     </font>
+                                                                     <HBox.margin>
+                                                                        <Insets />
+                                                                     </HBox.margin></Text>
+                                                               </children>
+                                                               <VBox.margin>
+                                                                  <Insets bottom="11.0" left="15.0" right="15.0" top="10.0" />
+                                                               </VBox.margin>
+                                                               <padding>
+                                                                  <Insets left="10.0" />
+                                                               </padding>
+                                                            </HBox>
+                                                            <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="377.0" prefWidth="888.0">
+                                                               <children>
+                                                                  <VBox prefHeight="159.0" prefWidth="858.0" spacing="3.0">
+                                                                     <children>
+                                                                        <VBox alignment="CENTER_LEFT" minHeight="90.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: white; -fx-border-style: solid; -fx-border-width: 2px;" VBox.vgrow="ALWAYS">
+                                                                           <children>
+                                                                              <Text fill="#2c787c" strokeType="OUTSIDE" strokeWidth="0.0" text="System Alert: Cause for Concern" wrappingWidth="228.5869140625">
+                                                                                 <font>
+                                                                                    <Font size="14.0" />
+                                                                                 </font>
+                                                                              </Text>
+                                                                              <Label prefHeight="69.0" prefWidth="858.0" text="Student ID: 12345678 has registered 2 consecutive absences in your module CSY2030. An email has been sent to them. Please follow university protocol in order to address this issue. " wrapText="true" />
+                                                                           </children>
+                                                                           <padding>
+                                                                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                                           </padding>
+                                                                           <VBox.margin>
+                                                                              <Insets />
+                                                                           </VBox.margin>
+                                                                        </VBox>
+                                                                        <VBox alignment="CENTER_LEFT" minHeight="90.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: white; -fx-border-style: solid; -fx-border-width: 2px;" VBox.vgrow="ALWAYS">
+                                                                           <children>
+                                                                              <Text fill="#2c787c" strokeType="OUTSIDE" strokeWidth="0.0" text="System Alert: Confirmation letter required">
+                                                                                 <font>
+                                                                                    <Font size="14.0" />
+                                                                                 </font>
+                                                                              </Text>
+                                                                              <Label prefHeight="73.0" prefWidth="858.0" text="Student ID: 23344455 background checks completed. The student has been admitted and is ready to be enrolled on Course CSY2021. Please forward Confirmation letter." wrapText="true" />
+                                                                           </children>
+                                                                           <padding>
+                                                                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                                           </padding>
+                                                                           <VBox.margin>
+                                                                              <Insets />
+                                                                           </VBox.margin>
+                                                                        </VBox>
+                                                                        <VBox alignment="CENTER_LEFT" minHeight="90.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: white; -fx-border-style: solid; -fx-border-width: 2px;" VBox.vgrow="ALWAYS">
+                                                                           <children>
+                                                                              <Text fill="#2c787c" strokeType="OUTSIDE" strokeWidth="0.0" text="System Alert: Personal data update">
+                                                                                 <font>
+                                                                                    <Font size="14.0" />
+                                                                                 </font>
+                                                                              </Text>
+                                                                              <Label prefHeight="70.0" prefWidth="858.0" text="This is to inform you that your personal record, ID: 99999999, has been updated. Please contact administration if you have any further enquiries." wrapText="true" />
+                                                                           </children>
+                                                                           <padding>
+                                                                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                                           </padding>
+                                                                           <VBox.margin>
+                                                                              <Insets />
+                                                                           </VBox.margin>
+                                                                        </VBox>
+                                                                        <VBox alignment="CENTER_LEFT" minHeight="90.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: white; -fx-border-style: solid; -fx-border-width: 2px;" VBox.vgrow="ALWAYS">
+                                                                           <children>
+                                                                              <Text fill="#2c787c" strokeType="OUTSIDE" strokeWidth="0.0" text="System Alert: PT Appointment">
+                                                                                 <font>
+                                                                                    <Font size="14.0" />
+                                                                                 </font>
+                                                                              </Text>
+                                                                              <Label prefHeight="47.0" prefWidth="511.0" text="You have a new appointment pending. Please check your personal tutor page." wrapText="true" />
+                                                                           </children>
+                                                                           <padding>
+                                                                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                                           </padding>
+                                                                           <VBox.margin>
+                                                                              <Insets />
+                                                                           </VBox.margin>
+                                                                        </VBox>
+                                                                        <VBox alignment="BOTTOM_RIGHT" prefHeight="15.0" prefWidth="100.0">
+                                                                           <children>
+                                                                              <Label fx:id="viewAllL" text="View all..." textFill="#2c787c" />
+                                                                           </children>
+                                                                           <padding>
+                                                                              <Insets right="10.0" top="5.0" />
+                                                                           </padding>
+                                                                        </VBox>
+                                                                     </children>
+                                                                  </VBox>
+                                                               </children>
+                                                               <padding>
+                                                                  <Insets left="15.0" right="15.0" />
+                                                               </padding>
+                                                            </HBox>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </HBox>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="45.0" style="-fx-border-width: 0px 0px 2px 0px; -fx-border-color: white; -fx-border-style: solid; -fx-view-order: 0; -fx-background-color: white;">
+                           <children>
+                              <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="100.0">
+                                       <children>
+                                          <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
+                                             <image>
+                                                <Image url="@Images/studentStatIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="100" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" courses across the university" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="100.0" GridPane.columnIndex="1">
+                                       <children>
+                                          <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
+                                             <image>
+                                                <Image url="@Images/scrollStatIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="600" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" modules across the university" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="100.0" GridPane.columnIndex="2">
+                                       <children>
+                                          <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@Images/studentStatIcon.png" />
+                                             </image>
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
+                                          </ImageView>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="200" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Level 1 Students" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="100.0" GridPane.columnIndex="3">
+                                       <children>
+                                          <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@Images/scrollStatIcon.png" />
+                                             </image>
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
+                                          </ImageView>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="175" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Level 2 Students" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="100.0" GridPane.columnIndex="4">
+                                       <children>
+                                          <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@Images/studentStatIcon.png" />
+                                             </image>
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
+                                          </ImageView>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="155" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Level 3 students" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </GridPane>
+                           </children>
+                           <padding>
+                              <Insets left="30.0" right="30.0" />
+                           </padding>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </AnchorPane>
+                        <VBox alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="500.0" StackPane.alignment="CENTER_LEFT">
+                           <children>
+                              <ImageView fitWidth="450.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
+                                 <image>
+                                    <Image url="@../../../../images/Woodlands.png" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" left="50.0" top="20.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                           </children>
+                        </VBox>
+                        <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="45.0" style="-fx-border-width: 0px 0px 1px 0px; -fx-border-color: grey; -fx-border-style: solid; -fx-view-order: 0; -fx-background-color: white;" StackPane.alignment="BOTTOM_CENTER">
+                           <children>
+                              <GridPane alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="100.0" GridPane.columnIndex="3">
+                                       <children>
+                                          <ImageView fitHeight="35.0" fitWidth="35.0" onMouseClicked="#showNewStaffWindow" pickOnBounds="true" preserveRatio="true">
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
+                                             <image>
+                                                <Image url="@Images/plusBtn.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Text onMouseClicked="#showNewStaffWindow" strokeType="OUTSIDE" strokeWidth="0.0" text="Add staff" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="100.0" GridPane.columnIndex="4">
+                                       <children>
+                                          <ImageView fitHeight="35.0" fitWidth="35.0" onMouseClicked="#showNewModuleWindow" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@Images/plusBtn.png" />
+                                             </image>
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
+                                          </ImageView>
+                                          <Text onMouseClicked="#showNewModuleWindow" strokeType="OUTSIDE" strokeWidth="0.0" text="Add module" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="100.0" GridPane.columnIndex="5">
+                                       <children>
+                                          <ImageView fitHeight="35.0" fitWidth="35.0" onMouseClicked="#showNewCourseWindow" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@Images/plusBtn.png" />
+                                             </image>
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
+                                          </ImageView>
+                                          <Text onMouseClicked="#showNewCourseWindow" strokeType="OUTSIDE" strokeWidth="0.0" text="Add course" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="100.0" GridPane.columnIndex="2">
+                                       <children>
+                                          <ImageView fitHeight="35.0" fitWidth="35.0" onMouseClicked="#showNewStudentWindow" pickOnBounds="true" preserveRatio="true">
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
+                                             <image>
+                                                <Image url="@Images/plusBtn.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Text onMouseClicked="#showNewStudentWindow" strokeType="OUTSIDE" strokeWidth="0.0" text="Add student" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </GridPane>
+                           </children>
+                           <padding>
+                              <Insets left="30.0" right="30.0" />
+                           </padding>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </AnchorPane>
+                     </children>
+                  </StackPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
